@@ -2,7 +2,7 @@
 
 **Blaster** is a multiplayer third-person shooter featuring familiar competitive game modes, a wide range of unique and satisfying weapons, powerful pickups scattered across the detailed map, and fast-paced action.
 
-This repository provides a snapshot of all scripts and commit messages. It's intended to showcase the game's core systems and code structure - no assets or engine content are included. To learn more, visit https://fijalkowski.it/blaster.
+This repository provides a snapshot of all scripts and commit messages. It's intended to showcase the game's core systems and code structure - no assets or engine content are included. To learn more, visit [fijalkowski.it/blaster](https://fijalkowski.it/blaster).
 
 ## Commit messages
 
