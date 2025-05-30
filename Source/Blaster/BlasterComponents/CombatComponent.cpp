@@ -1119,6 +1119,7 @@ void UCombatComponent::DropFlag(const bool bForceDrop)
 	if (Flag && (bForceDrop || Flag->CanBeDropped(true)))
 	{
 		Flag->Dropped();
+		Flag = nullptr;
 		bIsHoldingFlag = false;
 
 		if (Character && EquippedWeapon)
