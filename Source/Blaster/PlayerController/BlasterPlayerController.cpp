@@ -736,7 +736,7 @@ void ABlasterPlayerController::SetHUDPingAmount(const float PingAmount)
 	if (CharacterOverlay && CharacterOverlay->PingAmount)
 	{
 		const int32 RoundedPingAmount = FMath::RoundToInt(PingAmount);
-		if (RoundedPingAmount > 0)
+		if (RoundedPingAmount >= HighPingThreshold)
 		{
 			const FString PingAmountText = FString::Printf(TEXT("%d"), RoundedPingAmount);
 			CharacterOverlay->PingAmount->SetText(FText::FromString(PingAmountText));
