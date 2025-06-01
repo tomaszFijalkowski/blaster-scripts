@@ -366,7 +366,7 @@ void ABlasterPlayerController::BeginPlay()
 		const float PingAmount = PlayerState->GetPingInMilliseconds();
 		SetHUDPingAmount(PingAmount);
 
-		const bool bIsHighPing = PingAmount > HighPingThreshold;
+		const bool bIsHighPing = PingAmount >= HighPingThreshold;
 		EnableHUDHighImage(bIsHighPing);
 	}
 
@@ -736,7 +736,7 @@ void ABlasterPlayerController::SetHUDPingAmount(const float PingAmount)
 	if (CharacterOverlay && CharacterOverlay->PingAmount)
 	{
 		const int32 RoundedPingAmount = FMath::RoundToInt(PingAmount);
-		if (RoundedPingAmount > 0)
+		if (RoundedPingAmount >= HighPingThreshold)
 		{
 			const FString PingAmountText = FString::Printf(TEXT("%d"), RoundedPingAmount);
 			CharacterOverlay->PingAmount->SetText(FText::FromString(PingAmountText));
@@ -802,7 +802,7 @@ void ABlasterPlayerController::CheckPing(const float DeltaTime)
 			const float PingAmount = PlayerState->GetPingInMilliseconds();
 			SetHUDPingAmount(PingAmount);
 
-			const bool bIsHighPing = PingAmount > HighPingThreshold;
+			const bool bIsHighPing = PingAmount >= HighPingThreshold;
 			EnableHUDHighImage(bIsHighPing);
 		}
 		HighPingRunningTime = 0.f;

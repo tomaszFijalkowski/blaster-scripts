@@ -88,6 +88,11 @@ void ABlasterGameMode::PlayerEliminated(ABlasterCharacter* EliminatedCharacter,
 
 void ABlasterGameMode::RequestRespawn(ACharacter* EliminatedCharacter, AController* EliminatedController)
 {
+	if (GetMatchState() != MatchState::InProgress)
+	{
+		return;
+	}
+
 	if (EliminatedCharacter)
 	{
 		EliminatedCharacter->Reset();
