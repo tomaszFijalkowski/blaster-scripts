@@ -6,6 +6,7 @@ This repository provides a snapshot of all scripts and commit messages. It's int
 
 ## Commit messages
 
+- Prevent respawning during cooldown
 - Fix dangling pointer after dropping a flag
 - Improve sound attenuation
 - Add fallback spawn to prevent spawn camping
